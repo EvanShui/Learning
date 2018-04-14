@@ -1,17 +1,21 @@
 # Creating Tables 
-Prior to creating the table, you have to figure out how to structure the table
-and understanding what each table column's variable type is. 
-## Variable Types 
-1. varchar 
-* Variable-length strings. 
-* Length value is between 0 and 65,535. 
-* Once declared to a specific length, varchar entries will take up the amount of
-  space they naturally take up plus 1 byte due to trailing spaces UP TO the
-  size they were defined to take up.
-2. char 
-* Static-length strings.
-* Length value is divided up in x byte intervals. 
-* Entries are stored and their size is static. Even if the entry is a blank
-  string, will still take up the size that the char is pre-defined. 
-3. date
-4. int
+[__link for creating
+tables:__][https://dev.mysql.com/doc/mysql-tutorial-excerpt/5.7/en/creating-tables.html]
+* Prior to creating the table, you have to figure out how to structure the table and understanding what each table column's variable type is. 
+## Altering Tables
+* If make mistake, MySQL provides ALTER TABLE
+## Columns 
+[__link for column
+types:__][https://dev.mysql.com/doc/refman/5.7/en/show-columns.html]
+## Keys 
+* (Empty key) 
+  * Column either is either not indexed or is indexed as secondary column.
+* PRI (Primary Key) 
+  * Primary key is the primary identification of a given row in your table. 
+  * Each row's primary key will uniquely identify that row.
+* MUL (Multiple Key) 
+  * Allows for multiple occurances of a given value. 
+* UNI (Unique Key)
+  * Key that enforces uniquenss on that set of columns
+  * That column can only have unique values, if user tries to enter a row with a value that matches with an existing row, will throw error.
+* 
